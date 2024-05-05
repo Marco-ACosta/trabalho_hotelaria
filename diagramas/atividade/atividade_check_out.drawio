@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="mIBK30z5odNGXf8Efi0g" name="Page-1">
-        <mxGraphModel dx="713" dy="463" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="588" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -31,8 +31,18 @@
                 <mxCell id="10" style="edgeStyle=none;html=1;" parent="1" source="12" target="16" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
+                <mxCell id="29" value="não" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="10">
+                    <mxGeometry x="-0.1701" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="11" style="edgeStyle=none;html=1;" parent="1" source="12" target="14" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="sim" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="11">
+                    <mxGeometry x="-0.6667" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="12" value="Quarto possui&#10;trava eletrônica?" style="rhombus;" parent="1" vertex="1">
                     <mxGeometry x="420" y="190" width="100" height="100" as="geometry"/>
@@ -49,11 +59,23 @@
                 <mxCell id="16" value="entregar chave para balconista" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="170" y="220" width="180" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" style="edgeStyle=none;html=1;" parent="1" source="18" target="21" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="22" style="edgeStyle=none;html=1;" parent="1" target="21" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="260" y="400" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="sim" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="22">
+                    <mxGeometry x="-0.4862" y="-2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="24" style="edgeStyle=none;html=1;" parent="1" source="18" target="23" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="não" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="24">
+                    <mxGeometry x="0.3572" relative="1" as="geometry">
+                        <mxPoint x="14" as="offset"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="18" value="Método de &#10;pagamento &#10;é eletrônico?" style="rhombus;" parent="1" vertex="1">
                     <mxGeometry x="210" y="300" width="100" height="100" as="geometry"/>
@@ -68,13 +90,13 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="23" value="pagar no caixa" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="40" y="330" width="140" height="40" as="geometry"/>
+                    <mxGeometry x="20" y="330" width="140" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="25" value="" style="ellipse;html=1;shape=endState;fillColor=strokeColor;" parent="1" vertex="1">
                     <mxGeometry x="245" y="520" width="30" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="26" value="" style="ellipse;html=1;shape=endState;fillColor=strokeColor;" parent="1" vertex="1">
-                    <mxGeometry x="95" y="410" width="30" height="30" as="geometry"/>
+                    <mxGeometry x="75" y="410" width="30" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
