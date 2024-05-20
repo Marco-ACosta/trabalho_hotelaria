@@ -1,26 +1,24 @@
 import { BaseSchema } from '@adonisjs/lucid/schema'
 
 export default class extends BaseSchema {
-  protected tableName = 'tipo_camas_quartos'
+  protected tableName = 'clientes_preferencias'
 
   async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.uuid('id').notNullable().primary()
-      table.integer('quantidade').notNullable()
       table
-        .uuid('id_quarto')
+        .uuid('id_preferencia')
         .notNullable()
         .unsigned()
         .references('id')
-        .inTable('quartos')
+        .inTable('preferencias')
         .onDelete('CASCADE')
-
       table
-        .uuid('id_tipo_cama')
+        .uuid('id_cliente')
         .notNullable()
         .unsigned()
         .references('id')
-        .inTable('tipo_camas')
+        .inTable('clientes')
         .onDelete('CASCADE')
     })
   }
