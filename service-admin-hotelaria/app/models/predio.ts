@@ -1,6 +1,6 @@
-import { BaseModel, column, hasMany, hasOne } from '@adonisjs/lucid/orm'
+import { BaseModel, belongsTo, column, hasMany } from '@adonisjs/lucid/orm'
 import Endereco from '#models/endereco'
-import type { HasMany, HasOne } from '@adonisjs/lucid/types/relations'
+import type { BelongsTo, HasMany } from '@adonisjs/lucid/types/relations'
 import Quarto from '#models/quarto'
 
 export default class Predio extends BaseModel {
@@ -16,8 +16,10 @@ export default class Predio extends BaseModel {
   @column()
   declare id_endereco: string
 
-  @hasOne(() => Endereco)
-  declare Endereco: HasOne<typeof Endereco>
+  @belongsTo(() => Endereco, {
+    foreignKey: 'id_endereco',
+  })
+  declare endereco: BelongsTo<typeof Endereco>
 
   @hasMany(() => Quarto)
   declare quartos: HasMany<typeof Quarto>

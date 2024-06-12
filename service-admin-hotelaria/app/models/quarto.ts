@@ -40,12 +40,12 @@ export default class Quarto extends BaseModel {
   declare pode_animais: boolean
 
   @column()
-  declare disponivel: string
+  declare disponivel: boolean
 
   @column()
   declare id_predio: string
 
-  @belongsTo(() => Predio)
+  @belongsTo(() => Predio, { foreignKey: 'id_predio' })
   declare predio: BelongsTo<typeof Predio>
 
   @hasMany(() => Foto)

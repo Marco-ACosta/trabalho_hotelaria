@@ -5,7 +5,11 @@ export default class extends BaseSchema {
 
   async up() {
     this.schema.createTable(this.tableName, (table) => {
-      table.uuid('id').notNullable().primary()
+      table
+        .uuid('id')
+        .notNullable()
+        .primary()
+        .defaultTo(this.db.rawQuery('uuid_generate_v4()').knexQuery)
       table.string('nome').nullable()
       table.string('email', 254).notNullable().unique()
       table.string('cpf', 11).notNullable().unique()

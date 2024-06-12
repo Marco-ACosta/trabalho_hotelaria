@@ -1,4 +1,3 @@
-import { DateTime } from 'luxon'
 import hash from '@adonisjs/core/services/hash'
 import { compose } from '@adonisjs/core/helpers'
 import { BaseModel, belongsTo, column, hasOne } from '@adonisjs/lucid/orm'
@@ -10,10 +9,10 @@ import TipoUsuario from '#models/tipo_usuario'
 
 const AuthFinder = withAuthFinder(() => hash.use('scrypt'), {
   uids: ['email'],
-  passwordColumnName: 'password',
+  passwordColumnName: 'senha',
 })
 
-export default class User extends compose(BaseModel, AuthFinder) {
+export default class Usuario extends compose(BaseModel, AuthFinder) {
   @column({ isPrimary: true })
   declare id: string
 
@@ -27,22 +26,23 @@ export default class User extends compose(BaseModel, AuthFinder) {
   declare senha: string
 
   @column()
-  declare cpf: DateTime
+  declare cpf: string
 
   @column()
-  declare setor_id: string
+  declare id_setor: string
 
-  @column.dateTime({ autoCreate: true })
-  declare createdAt: DateTime
-
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
-  declare updatedAt: DateTime | null
-
-  static accessTokens = DbAccessTokensProvider.forModel(User)
+  @column()
+  declare id_tipo_usuario: string
 
   @belongsTo(() => Setor)
   declare setor: BelongsTo<typeof Setor>
 
-  @hasOne(() => TipoUsuario)
-  declare tipoUsuario: HasOne<typeof TipoUsuario>
+  @belongsTo(() => TipoUsuario, {
+    foreignKey: 'id_tipo_usuario',
+  })
+  declare tipoUsuario: BelongsTo<typeof TipoUsuario>
+
+  static accessTokens = DbAccessTokensProvider.forModel(Usuario, {
+    table: 'auth_access_tokens_usuarios',
+  })
 }
