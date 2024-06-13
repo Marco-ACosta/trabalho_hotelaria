@@ -1,0 +1,3 @@
+[submodule "e-check-frontend"]
+	path = e-check-frontend
+	url = https://github.com/raisson-souza/e-check-frontend.git
