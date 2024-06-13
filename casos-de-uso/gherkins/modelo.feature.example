@@ -1,0 +1,18 @@
+Feature: [ Descrição da funcionalidade ]
+
+    Scenario: [ Passo da funcionalidade ]
+        Given: [ Contexto incial ]
+        When: [ Ação ]
+        And [ (Opcional) ]
+        Then [ Resultado esperado ]
+        But [ (Opcional) ]
+
+    Scenario: [ Passo da funcionalidade ]
+        Given: [ Contexto com quantidade <first_number> incial ]
+        When: [ Ação <subtraction> sobre a quantidade ]
+        And [ (Opcional) ]
+        Then [ Resultado <result> da operação ]
+
+        Examples:
+            | first_number | subtraction | result |
+            |      x       |     y       |  x - y | 
