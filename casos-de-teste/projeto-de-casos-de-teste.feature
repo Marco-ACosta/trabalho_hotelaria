@@ -7,8 +7,8 @@ Feature: Ação do check-in via app.
         When: eu acessar a tela de check-in e pressionar o botão de selfie.
         Then: a câmera será solicitada pelo app e aceitarei, quando eu abrir eu poderei registrar uma foto minha.
         And: o sistema irá validar a minha imagem e confirmar minha identidade.
-        And: o botão de selfie ficará com o fundo na cor verde.
-        And: o botão de acesso a chave do quarto ficará disponível e na cor de fundo amarela SE eu também completar o processo do botão de localização.
+        And: o botão de selfie ficará com "check" indicando sucesso.
+        And: o botão de acesso a chave do quarto ficará disponível SE eu também completar o processo do botão de localização.
         But: o processo do botão de selfie será cancelado se eu negar acesso a câmera.
 
     # Caminho Triste
@@ -29,8 +29,8 @@ Feature: Ação do check-in via app.
         When: eu acessar a tela de login e pressionar o botão de localização.
         Then: o aplicativo solicitará acesso ao GPS de meu celular e eu aceitarei.
         And: o sistema através do GPS confirmará minha localzação no hotel.
-        And: o botão de localização ficará com o fundo na cor verde.
-        And: o botão de acesso a chave do quarto ficará disponível e na cor de fundo amarela SE eu também completar o processo do botão de selfie.
+        And: o botão de localização ficará com "check" indicando sucesso.
+        And: o botão de acesso a chave do quarto ficará disponível SE eu também completar o processo do botão de selfie.
         But: se eu negar acesso ao GPS o processo é cancelado.
 
     # Caminho Triste
@@ -76,9 +76,9 @@ Feature: Ação do check-in via app.
         Given: que eu nunca tenha realizado um check-in enquanto logado na mesma conta.
         And: eu possua uma reserva confirmada.
         When: eu acessar a tela de check-in.
-        Then: o botão de selfie estará disponível e com cor de fundo amarela,
-        And: o botão de localização estará disponível e com cor de fundo amarela,
-        And: o botão de acesso a chave do quarto estará bloqueado e com cor de fundo cinza.
+        Then: o botão de selfie estará disponível e com um "xis" indicando que o seu processo não foi feito,
+        And: o botão de localização estará disponível e com um "xis" indicando que o seu processo não foi feito,
+        And: o botão de acesso a chave do quarto estará bloqueado e com cor apagada.
 
     # Caminho Triste
     @teste-1-9
