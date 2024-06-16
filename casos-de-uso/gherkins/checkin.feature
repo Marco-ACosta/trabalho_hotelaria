@@ -52,7 +52,7 @@ Feature: Ação do check-in via app.
         When: eu pressionar o botão de acesso a chave do quarto.
         Then: o aplicativo me redirecionará para a tela com a instrução de entrar em contato com o recepcionista para retirar a chave.
 
-    Scenario: Botão de acesso a chave quando o hotel possui TRANCA FÍSICA.
+    Scenario: Botão de acesso a chave do quarto quando o hotel possui TRANCA FÍSICA.
         Given: que o botão de acesso a chave do quarto esteja disponível.
         And: eu <chave_retirada> retirado a chave do quarto.
         When: eu pressionar o botão de acesso a chave do quarto.
